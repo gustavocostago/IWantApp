@@ -1,7 +1,4 @@
-using Azure;
-using Dapper;
 using IWantApp.Infra.Data;
-using Microsoft.Data.SqlClient;
 
 namespace IWantApp.Endpoints.Employees;
 
