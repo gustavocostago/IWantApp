@@ -3,7 +3,7 @@ services:
     image: mcr.microsoft.com/azure-sql-edge:latest
     environment:
       - "ACCEPT_EULA=1"
-      - "MSSQL_SA_PASSWORD=yourpassword" #define your password
+      - "MSSQL_SA_PASSWORD=@Yourpassword" #define your password
     ports:
       - "1433:1433"
     hostname: mssql
