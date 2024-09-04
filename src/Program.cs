@@ -35,6 +35,10 @@ builder.Services.AddAuthorization(
                 "EmployeePolicy",
                 p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode")
             );
+            options.AddPolicy(
+                "Employee005Policy",
+                p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode", "005")
+            );
         }
     )
 );
@@ -52,6 +56,7 @@ builder
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.Zero,
             ValidIssuer = builder.Configuration["JwtBearerTokenSettings:Issuer"],
             ValidAudience = builder.Configuration["JwtBearerTokenSettings:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
