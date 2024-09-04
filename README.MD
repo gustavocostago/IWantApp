@@ -1,1 +1,1 @@
-CRUD com C#/.NET 6
+CRUD com C# .NET 8
