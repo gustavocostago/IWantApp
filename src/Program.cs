@@ -36,8 +36,8 @@ builder.Services.AddAuthorization(
                 p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode")
             );
             options.AddPolicy(
-                "Employee005Policy",
-                p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode", "005")
+                "Employee01Policy",
+                p => p.RequireAuthenticatedUser().RequireClaim("EmployeeCode", "1")
             );
         }
     )
